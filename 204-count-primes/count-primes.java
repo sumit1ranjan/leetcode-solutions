@@ -4,8 +4,8 @@ class Solution {
             return 0;
         }
         int count=0;
-        boolean[] prime=new boolean[n+1];
-        for(int i=0; i<=n; i++){
+        boolean[] prime=new boolean[n];
+        for(int i=0; i<n; i++){
             prime[i]=true;
         }
         prime[0]=false;
