@@ -8,7 +8,7 @@ class Solution {
         while(i>=0 && j>=0){
             int p=prices[i];
             int d=discounts[j];
-            double price=(p * (100 - d)) / 100.00;
+            double price=(double)p * (100 - d) / 100;// idhar tune gadbad kiya tha, p can overflow! 
             f_price=f_price+price;
             i--;
             j--;
