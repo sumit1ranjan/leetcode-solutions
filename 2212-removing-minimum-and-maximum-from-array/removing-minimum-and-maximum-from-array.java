@@ -25,6 +25,6 @@ class Solution {
         int left = Math.max(idxmin, idxmax) + 1;
         int right = n - Math.min(idxmin, idxmax);
         int both = (Math.min(idxmin, idxmax) + 1)+ (n - Math.max(idxmin, idxmax));
-        return Math.min(left,(Math.min(right,both)));
+        return Math.min(right,(Math.min(left,both)));
     }
 }
