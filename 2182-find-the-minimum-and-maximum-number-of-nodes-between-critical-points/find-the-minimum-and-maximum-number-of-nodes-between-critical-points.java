@@ -14,7 +14,6 @@ class Solution {
         ListNode curr=head.next;
         ArrayList<Integer> list= new ArrayList<>();
         int idx=1;
-        int count=0;
         while(curr.next!=null){
             boolean criticalpoint=false;
             if(prev.val>curr.val && curr.next.val>curr.val){
@@ -25,7 +24,6 @@ class Solution {
             }
             if(criticalpoint){
                 list.add(idx);
-                count++;
             }
             prev=curr;
             curr=curr.next;
@@ -40,15 +38,7 @@ class Solution {
             min=Math.min(diff,min);
         }
         int max = list.get(list.size() - 1) - list.get(0);
-        int[] arr=new int[2];
-        if(count<2){
-            arr[0]=-1;
-            arr[1]=-1;
-            return arr;
-        }
-        arr[0]=min;
-        arr[1]=max;
-        return arr;
+        return new int[]{min,max};
 
     }
 }
